@@ -13,6 +13,12 @@
 </head>
 
 <body>
+    <!-- Language Bubble change-translate-->
+    <div class="lang-bubble" role="group" aria-label="Cambiar idioma">
+        <button class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
     <!-- Decoración (sin imágenes) -->
     <div class="bg-deco" aria-hidden="true">
         <span class="blob b1"></span>
@@ -267,53 +273,53 @@
 
     <!-- EQUIPO (BIO COMPLETA) -->
     <section id="equipo" class="section reveal">
-    <div class="container">
-        <header class="section-head">
-            <h2>Nuestro Equipo</h2>
-        </header>
+        <div class="container">
+            <header class="section-head">
+                <h2>Nuestro Equipo</h2>
+            </header>
 
-        <div class="team-grid">
+            <div class="team-grid">
 
-            <article class="team-card">
-                <div class="avatar">
-                    <img src="./uploads/image4.jpeg" alt="Aaron Villalobos">
-                </div>
-                <div class="team-info">
-                    <h3>Lic. Aaron Villalobos</h3>
-                    <h4>Fisioterapeuta</h4>
-                    <p>Con amplia formación y experiencia en el ámbito clínico, Aaron se especializa en
-                    procesos de rehabilitación física, prevención de lesiones y recuperación
-                    postquirúrgica. Su enfoque combina la valoración funcional detallada, la
-                    prescripción de ejercicio terapéutico y la educación del paciente como pilares de
-                    una terapia efectiva.
-                    Se distingue por su trato empático, profesionalismo y compromiso con resultados
-                    sostenibles que permitan al paciente retomar sus actividades con seguridad y
-                    confianza.</p>
-                </div>
-            </article>
+                <article class="team-card">
+                    <div class="avatar">
+                        <img src="./uploads/image4.jpeg" alt="Aaron Villalobos">
+                    </div>
+                    <div class="team-info">
+                        <h3>Lic. Aaron Villalobos</h3>
+                        <h4>Fisioterapeuta</h4>
+                        <p>Con amplia formación y experiencia en el ámbito clínico, Aaron se especializa en
+                            procesos de rehabilitación física, prevención de lesiones y recuperación
+                            postquirúrgica. Su enfoque combina la valoración funcional detallada, la
+                            prescripción de ejercicio terapéutico y la educación del paciente como pilares de
+                            una terapia efectiva.
+                            Se distingue por su trato empático, profesionalismo y compromiso con resultados
+                            sostenibles que permitan al paciente retomar sus actividades con seguridad y
+                            confianza.</p>
+                    </div>
+                </article>
 
-            <article class="team-card">
-                <div class="avatar">
-                    <img src="./uploads/image45.jpeg" alt="Jimena Mourraille">
-                </div>
-                <div class="team-info">
-                    <h3>Licda. Jimena Mourraille</h3>
-                    <h4>Terapeuta Ocupacional</h4>
-                    <p>Profesional con sólida trayectoria en el área clínica, académica y de investigación.
-                    Jimena combina la práctica terapéutica con la visión innovadora en integración
-                    sensorial.
-                    Cuenta con formación avanzada en Neuropsicología y manejo conductual desde la
-                    perspectiva de la autorregulación aplicando estrategias centradas en la persona
-                    para favorecer la autonomía, la funcionalidad y la participación en las actividades
-                    diarias. Su experiencia incluye liderazgo en acreditaciones internacionales y
-                    colaboración interdisciplinaria en proyectos terapéuticos.
-                    </p>
-                </div>
-            </article>
+                <article class="team-card">
+                    <div class="avatar">
+                        <img src="./uploads/image45.jpeg" alt="Jimena Mourraille">
+                    </div>
+                    <div class="team-info">
+                        <h3>Licda. Jimena Mourraille</h3>
+                        <h4>Terapeuta Ocupacional</h4>
+                        <p>Profesional con sólida trayectoria en el área clínica, académica y de investigación.
+                            Jimena combina la práctica terapéutica con la visión innovadora en integración
+                            sensorial.
+                            Cuenta con formación avanzada en Neuropsicología y manejo conductual desde la
+                            perspectiva de la autorregulación aplicando estrategias centradas en la persona
+                            para favorecer la autonomía, la funcionalidad y la participación en las actividades
+                            diarias. Su experiencia incluye liderazgo en acreditaciones internacionales y
+                            colaboración interdisciplinaria en proyectos terapéuticos.
+                        </p>
+                    </div>
+                </article>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- CONTACTO / UBICACIÓN / HORARIO -->
@@ -321,33 +327,38 @@
         <div class="container">
             <header class="section-head">
                 <h2>Contáctanos</h2>
-                <p class="sub">Tu bienestar comienza aquí. Cada cita en VM Health es una oportunidad para avanzar hacia
-                    una vida más activa, independiente y sin dolor. Nos comprometemos a acompañarte en cada paso de tu
-                    proceso terapéutico, con empatía, profesionalismo y atención personalizada. Agendá tu cita hoy y
-                    comencemos a trabajar por tu bienestar.</p>
+                <p class="sub">
+                    Tu bienestar comienza aquí. Cada cita en VM Health es una oportunidad para avanzar hacia
+                    una vida más activa, independiente y sin dolor. Nos comprometemos a acompañarte en cada paso
+                    de tu proceso terapéutico, con empatía, profesionalismo y atención personalizada. Agendá tu cita
+                    hoy y comencemos a trabajar por tu bienestar.
+                </p>
             </header>
 
             <div class="contact-grid">
-                <form class="form-card" onsubmit="return false;">
+                <form id="contactForm" class="form-card" action="https://formspree.io/f/xjgeqalb" method="POST">
                     <div class="field">
                         <label for="nombre">Nombre</label>
-                        <input id="nombre" type="text" placeholder="Tu nombre" required />
+                        <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
                     </div>
+
                     <div class="field duo">
                         <div>
                             <label for="telefono">Teléfono / WhatsApp</label>
-                            <input id="telefono" type="tel" placeholder="+506 ..." />
+                            <input id="telefono" name="telefono" type="tel" placeholder="+506 ..." required/>
                         </div>
                         <div>
                             <label for="correo">Correo</label>
-                            <input id="correo" type="email" placeholder="tucorreo@ejemplo.com" required />
+                            <input id="correo" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
                         </div>
                     </div>
+
                     <div class="field">
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" rows="4" placeholder="Cuéntanos tu caso"></textarea>
+                        <textarea id="mensaje" name="message" rows="4" placeholder="Cuéntanos tu caso" required></textarea>
                     </div>
-                    <button id="btnEnviar" class="btn btn-primary w100">Enviar (demo)</button>
+
+                    <button id="btnEnviar" type="submit" class="btn btn-primary w100">Enviar</button>
                 </form>
 
                 <div class="info-card">
@@ -357,14 +368,18 @@
                         <div><span>Sábado</span><span>8:00 a.m. – 4:00 p.m.</span></div>
                         <div class="off"><span>Domingos y feriados</span><span>Cerrado</span></div>
                     </div>
+
                     <div class="lines">
-                        <div><strong>Teléfono / WhatsApp:</strong> [+506]</div>
+                        <div><strong>Teléfono / WhatsApp:</strong>
+                            <a href="https://wa.me/50685437714" target="_blank" rel="noopener">+506 8543 7714</a>
+                        </div>
                         <div><strong>Correo:</strong> <a href="mailto:vmhealth14@gmail.com">vmhealth14@gmail.com</a>
                         </div>
                         <div><strong>Ubicación:</strong> Curridabat, Lomas de Ayarco, Costa Rica</div>
                         <div><strong>Waze:</strong> <a href="https://waze.com/ul/hd1u0rsp5e" target="_blank"
                                 rel="noopener">Hacienda Vieja, Curridabat</a></div>
                     </div>
+
                     <div class="map">
                         <iframe title="Mapa de ubicación" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             src="https://www.google.com/maps?q=Curridabat%20Lomas%20de%20Ayarco%20Costa%20Rica&output=embed"></iframe>
