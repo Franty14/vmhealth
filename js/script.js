@@ -75,7 +75,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 const i18n = {
     es: {
         title: "VM Health — Terapia Física & Ocupacional",
-        nav: ["Inicio", "Nosotros", "Terapia Física", "Terapia Ocupacional", "Equipo"],
+        nav: ["Inicio", "Nosotros", "Terapia Física", "Terapia Ocupacional", "Planes", "Convenios", "Equipo"],
         burgerLabel: "Abrir menú",
         toTopLabel: "Volver arriba",
 
@@ -161,6 +161,72 @@ const i18n = {
             ]
         },
 
+        plans: {
+            h2: "Planes Terapéuticos",
+            sub: "Contamos con planes estructurados por sesiones, diseñados según las metas terapéuticas de cada persona, su proceso de rehabilitación y el entorno en el que necesita desenvolverse con mayor independencia.",
+            groups: [
+                {
+                    badge: "Terapia Física",
+                    heading: "Planes enfocados en movimiento, rehabilitación y mantenimiento funcional",
+                    cards: [
+                        {
+                            tag: "Plan Deportivo",
+                            sessions: "10 sesiones",
+                            title: "Terapia de Rehabilitación Deportiva",
+                            desc: "Programa enfocado en personas con lesiones deportivas o en proceso de readaptación física. Incluye valoración funcional, control del dolor, fortalecimiento, movilidad y retorno progresivo a la actividad."
+                        },
+                        {
+                            tag: "Adulto Mayor",
+                            sessions: "10 sesiones",
+                            title: "Sesiones de Mantenimiento Funcional",
+                            desc: "Plan orientado a preservar la movilidad, el equilibrio, la fuerza y la autonomía del adulto mayor, favoreciendo la prevención de caídas y el mantenimiento de una vida activa y segura."
+                        }
+                    ]
+                },
+                {
+                    badge: "Terapia Ocupacional",
+                    heading: "Planes orientados a funcionalidad, participación y acompañamiento integral",
+                    cards: [
+                        {
+                            tag: "Entorno Escolar",
+                            sessions: "10 sesiones",
+                            title: "Plan de Intervención Escolar",
+                            desc: "Diseñado para fortalecer habilidades de participación en el contexto educativo, incluyendo atención, seguimiento de rutinas, autorregulación, organización y adaptación al entorno escolar."
+                        },
+                        {
+                            tag: "Familia",
+                            sessions: "10 sesiones",
+                            title: "Plan de Manejo y Acompañamiento Familiar",
+                            desc: "Enfocado en brindar estrategias prácticas a la familia para acompañar el proceso terapéutico, fortalecer rutinas en casa, mejorar la participación y favorecer la generalización de avances en la vida diaria."
+                        },
+                        {
+                            tag: "Conductual",
+                            sessions: "10 sesiones",
+                            title: "Plan de Manejo Conductual",
+                            desc: "Dirigido a apoyar procesos de regulación, conducta y participación funcional mediante estrategias terapéuticas individualizadas, promoviendo mayor adaptación en casa, escuela y comunidad."
+                        }
+                    ]
+                }
+            ]
+        },
+
+        agreements: {
+            h2: "Nuestros Convenios",
+            sub: "En VM Health contamos con convenios que fortalecen el acceso a nuestros servicios y favorecen una atención terapéutica más cercana, práctica y accesible para nuestros pacientes.",
+            cards: [
+                {
+                    title: "PALIG",
+                    desc: "Convenio disponible para facilitar el acceso de pacientes vinculados a PALIG a nuestros servicios terapéuticos, brindando atención profesional, personalizada y enfocada en su bienestar funcional.",
+                    alt: "Logo convenio PALIG"
+                },
+                {
+                    title: "ASSA",
+                    desc: "Convenio orientado a apoyar a personas aseguradas o vinculadas con ASSA, promoviendo el acceso a procesos de rehabilitación y acompañamiento terapéutico según sus necesidades.",
+                    alt: "Logo convenio ASSA"
+                }
+            ]
+        },
+
         team: {
             h2: "Nuestro Equipo",
             members: [
@@ -193,6 +259,9 @@ const i18n = {
                 msg: "Cuéntanos tu caso"
             },
             btn: "Enviar",
+            sending: "Enviando...",
+            sent: "Enviado ✔",
+            error: "No se pudo enviar. Revisá tu conexión o bloqueadores y probá otra vez.",
             hoursTitle: "Horario de Atención",
             hours: [
                 { day: "Lunes a Viernes", time: "8:00 a.m. – 7:00 p.m." },
@@ -212,7 +281,7 @@ const i18n = {
 
     en: {
         title: "VM Health — Physical & Occupational Therapy",
-        nav: ["Home", "About", "Physical Therapy", "Occupational Therapy", "Team"],
+        nav: ["Home", "About", "Physical Therapy", "Occupational Therapy", "Plans", "Agreements", "Team"],
         burgerLabel: "Open menu",
         toTopLabel: "Back to top",
 
@@ -298,6 +367,72 @@ const i18n = {
             ]
         },
 
+        plans: {
+            h2: "Therapeutic Plans",
+            sub: "We offer session-based plans tailored to each person’s therapeutic goals, rehabilitation process, and the environment in which they need to function with greater independence.",
+            groups: [
+                {
+                    badge: "Physical Therapy",
+                    heading: "Plans focused on movement, rehabilitation, and functional maintenance",
+                    cards: [
+                        {
+                            tag: "Sports Plan",
+                            sessions: "10 sessions",
+                            title: "Sports Rehabilitation Therapy",
+                            desc: "A program designed for people with sports injuries or those going through physical reconditioning. It includes functional assessment, pain management, strengthening, mobility, and gradual return to activity."
+                        },
+                        {
+                            tag: "Older Adults",
+                            sessions: "10 sessions",
+                            title: "Functional Maintenance Sessions",
+                            desc: "A plan focused on preserving mobility, balance, strength, and independence in older adults, helping prevent falls and maintain an active and safe lifestyle."
+                        }
+                    ]
+                },
+                {
+                    badge: "Occupational Therapy",
+                    heading: "Plans focused on functionality, participation, and comprehensive support",
+                    cards: [
+                        {
+                            tag: "School Environment",
+                            sessions: "10 sessions",
+                            title: "School Intervention Plan",
+                            desc: "Designed to strengthen participation skills in educational settings, including attention, routine follow-through, self-regulation, organization, and adaptation to the school environment."
+                        },
+                        {
+                            tag: "Family",
+                            sessions: "10 sessions",
+                            title: "Family Guidance and Support Plan",
+                            desc: "Focused on providing practical strategies to help families support the therapeutic process, strengthen routines at home, improve participation, and encourage carryover into daily life."
+                        },
+                        {
+                            tag: "Behavioral",
+                            sessions: "10 sessions",
+                            title: "Behavior Management Plan",
+                            desc: "Aimed at supporting regulation, behavior, and functional participation through individualized therapeutic strategies, promoting better adaptation at home, school, and in the community."
+                        }
+                    ]
+                }
+            ]
+        },
+
+        agreements: {
+            h2: "Our Agreements",
+            sub: "At VM Health, we have agreements that strengthen access to our services and support a closer, more practical, and more accessible therapeutic experience for our patients.",
+            cards: [
+                {
+                    title: "PALIG",
+                    desc: "An available agreement that helps facilitate access for patients connected to PALIG, offering professional, personalized therapeutic care focused on their functional well-being.",
+                    alt: "PALIG agreement logo"
+                },
+                {
+                    title: "ASSA",
+                    desc: "An agreement designed to support insured individuals or people connected to ASSA, promoting access to rehabilitation processes and therapeutic support according to their needs.",
+                    alt: "ASSA agreement logo"
+                }
+            ]
+        },
+
         team: {
             h2: "Our Team",
             members: [
@@ -330,6 +465,9 @@ const i18n = {
                 msg: "Tell us about your case"
             },
             btn: "Send",
+            sending: "Sending...",
+            sent: "Sent ✔",
+            error: "Could not send your message. Please check your connection or blockers and try again.",
             hoursTitle: "Opening Hours",
             hours: [
                 { day: "Monday to Friday", time: "8:00 a.m. – 7:00 p.m." },
@@ -354,7 +492,7 @@ function applyLang(lang) {
     document.title = t.title;
 
     const navLinks = document.querySelectorAll(".menu a");
-    if (navLinks.length >= 5) {
+    if (navLinks.length >= 7) {
         navLinks.forEach((a, i) => {
             if (t.nav[i]) a.textContent = t.nav[i];
         });
@@ -437,6 +575,66 @@ function applyLang(lang) {
 
         if (title) title.textContent = c.title;
         if (desc) desc.textContent = c.desc;
+    });
+
+    const plansH2 = document.querySelector("#planes .section-head h2");
+    if (plansH2) plansH2.textContent = t.plans.h2;
+
+    const plansSub = document.querySelector("#planes .section-head .sub");
+    if (plansSub) plansSub.textContent = t.plans.sub;
+
+    const planGroups = document.querySelectorAll("#planes .plan-group");
+    planGroups.forEach((group, groupIdx) => {
+        const g = t.plans.groups[groupIdx];
+        if (!g) return;
+
+        const badge = group.querySelector(".plan-badge");
+        const heading = group.querySelector(".plan-group-head h3");
+        const cards = group.querySelectorAll(".plan-card");
+
+        if (badge) {
+            const icon = badge.querySelector("i");
+            badge.innerHTML = "";
+            if (icon) badge.appendChild(icon);
+            badge.append(" " + g.badge);
+        }
+
+        if (heading) heading.textContent = g.heading;
+
+        cards.forEach((card, cardIdx) => {
+            const c = g.cards[cardIdx];
+            if (!c) return;
+
+            const tag = card.querySelector(".plan-tag");
+            const sessions = card.querySelector(".plan-sessions");
+            const title = card.querySelector("h4");
+            const desc = card.querySelector("p");
+
+            if (tag) tag.textContent = c.tag;
+            if (sessions) sessions.textContent = c.sessions;
+            if (title) title.textContent = c.title;
+            if (desc) desc.textContent = c.desc;
+        });
+    });
+
+    const agreementsH2 = document.querySelector("#convenios .section-head h2");
+    if (agreementsH2) agreementsH2.textContent = t.agreements.h2;
+
+    const agreementsSub = document.querySelector("#convenios .section-head .sub");
+    if (agreementsSub) agreementsSub.textContent = t.agreements.sub;
+
+    const agreementCards = document.querySelectorAll("#convenios .agreement-card");
+    agreementCards.forEach((card, idx) => {
+        const c = t.agreements.cards[idx];
+        if (!c) return;
+
+        const title = card.querySelector(".agreement-overlay h3");
+        const desc = card.querySelector(".agreement-overlay p");
+        const img = card.querySelector(".agreement-logo");
+
+        if (title) title.textContent = c.title;
+        if (desc) desc.textContent = c.desc;
+        if (img) img.alt = c.alt;
     });
 
     const teamH2 = document.querySelector("#equipo h2");
@@ -561,8 +759,9 @@ if (contactForm && sendBtn) {
         e.preventDefault();
 
         sendBtn.disabled = true;
-        const original = sendBtn.textContent;
-        sendBtn.textContent = "Enviando...";
+        const activeLangBeforeSubmit = localStorage.getItem("vmhealth_lang") || "es";
+        const original = i18n[activeLangBeforeSubmit]?.contact?.btn || sendBtn.textContent;
+        sendBtn.textContent = i18n[activeLangBeforeSubmit]?.contact?.sending || "Enviando...";
 
         try {
             const formData = new FormData(contactForm);
@@ -574,21 +773,23 @@ if (contactForm && sendBtn) {
             });
 
             if (res.ok) {
-                sendBtn.textContent = "Enviado ✔";
+                const activeLang = localStorage.getItem("vmhealth_lang") || "es";
+                sendBtn.textContent = i18n[activeLang]?.contact?.sent || "Enviado ✔";
                 contactForm.reset();
 
                 setTimeout(() => {
                     sendBtn.disabled = false;
-                    const activeLang = localStorage.getItem("vmhealth_lang") || "es";
-                    sendBtn.textContent = i18n[activeLang]?.contact?.btn || original;
+                    const currentLang = localStorage.getItem("vmhealth_lang") || "es";
+                    sendBtn.textContent = i18n[currentLang]?.contact?.btn || original;
                 }, 1500);
             } else {
                 const data = await res.json().catch(() => null);
-                throw new Error(data?.error || "Formspree rechazó el envío.");
+                throw new Error(data?.error || "Formspree rejected the submission.");
             }
         } catch (err) {
             console.error(err);
-            alert("No se pudo enviar. Revisá tu conexión o bloqueadores y probá otra vez.");
+            const activeLang = localStorage.getItem("vmhealth_lang") || "es";
+            alert(i18n[activeLang]?.contact?.error || "No se pudo enviar. Revisá tu conexión o bloqueadores y probá otra vez.");
             sendBtn.disabled = false;
             sendBtn.textContent = original;
         }
