@@ -223,6 +223,16 @@ const i18n = {
                     title: "ASSA",
                     desc: "Convenio orientado a apoyar a personas aseguradas o vinculadas con ASSA, promoviendo el acceso a procesos de rehabilitación y acompañamiento terapéutico según sus necesidades.",
                     alt: "Logo convenio ASSA"
+                },
+                {
+                    title: "Saint Clare",
+                    desc: "Convenio dirigido a estudiantes, familias y personal vinculado al Colegio Saint Clare, con el fin de facilitar el acceso a nuestros servicios de terapia física y terapia ocupacional mediante una atención profesional, cercana y orientada al bienestar integral.",
+                    alt: "Logo convenio Saint Clare"
+                },
+                {
+                    title: "MediSmart",
+                    desc: "Convenio disponible para personas afiliadas a MediSmart, brindando acceso a procesos terapéuticos personalizados en terapia física y terapia ocupacional, enfocados en la prevención, rehabilitación y mejora de la funcionalidad.",
+                    alt: "Logo convenio MediSmart"
                 }
             ]
         },
@@ -429,6 +439,16 @@ const i18n = {
                     title: "ASSA",
                     desc: "An agreement designed to support insured individuals or people connected to ASSA, promoting access to rehabilitation processes and therapeutic support according to their needs.",
                     alt: "ASSA agreement logo"
+                },
+                {
+                    title: "Saint Clare",
+                    desc: "An agreement for students, families, and staff linked to Saint Clare School, aimed at facilitating access to our physical and occupational therapy services through professional, approachable care focused on overall well-being.",
+                    alt: "Saint Clare agreement logo"
+                },
+                {
+                    title: "MediSmart",
+                    desc: "An available agreement for MediSmart members, providing access to personalized physical and occupational therapy processes focused on prevention, rehabilitation, and improving functionality.",
+                    alt: "MediSmart agreement logo"
                 }
             ]
         },
