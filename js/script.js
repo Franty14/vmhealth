@@ -70,6 +70,84 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 // ===========================
+// Convenios: hover en desktop, click en móvil
+// ===========================
+function isTouchDevice() {
+    return window.matchMedia('(hover: none), (pointer: coarse)').matches || window.innerWidth <= 760;
+}
+
+function closeAllAgreements() {
+    document.querySelectorAll('.agreement-logo-wrap.is-open').forEach(card => {
+        card.classList.remove('is-open');
+        card.setAttribute('aria-expanded', 'false');
+    });
+}
+
+function initAgreementCards() {
+    const agreementCards = document.querySelectorAll('.agreement-logo-wrap');
+
+    agreementCards.forEach((card, index) => {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-expanded', 'false');
+
+        if (!card.dataset.bound) {
+            card.addEventListener('click', (e) => {
+                if (!isTouchDevice()) return;
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                const wasOpen = card.classList.contains('is-open');
+                closeAllAgreements();
+
+                if (!wasOpen) {
+                    card.classList.add('is-open');
+                    card.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            card.addEventListener('keydown', (e) => {
+                if (!isTouchDevice()) return;
+
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const wasOpen = card.classList.contains('is-open');
+                    closeAllAgreements();
+
+                    if (!wasOpen) {
+                        card.classList.add('is-open');
+                        card.setAttribute('aria-expanded', 'true');
+                    }
+                }
+
+                if (e.key === 'Escape') {
+                    card.classList.remove('is-open');
+                    card.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            card.dataset.bound = 'true';
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!isTouchDevice()) return;
+        if (!e.target.closest('.agreement-logo-wrap')) {
+            closeAllAgreements();
+        }
+    });
+}
+
+initAgreementCards();
+
+window.addEventListener('resize', () => {
+    if (!isTouchDevice()) {
+        closeAllAgreements();
+    }
+});
+
+// ===========================
 // Language switch (ES / EN)
 // ===========================
 const i18n = {
@@ -274,8 +352,8 @@ const i18n = {
             error: "No se pudo enviar. Revisá tu conexión o bloqueadores y probá otra vez.",
             hoursTitle: "Horario de Atención",
             hours: [
-                { day: "Lunes a Viernes", time: "8:00 a.m. – 7:00 p.m." },
-                { day: "Sábado", time: "8:00 a.m. – 4:00 p.m." },
+                { day: "Lunes a Viernes", time: "7:00 a.m. – 9:00 p.m." },
+                { day: "Sábado", time: "8:00 a.m. – 8:00 p.m." },
                 { day: "Domingos y feriados", time: "Cerrado" }
             ],
             emailAria: "Correo electrónico",
@@ -528,11 +606,11 @@ function applyLang(lang) {
     if (heroLead) heroLead.textContent = t.hero.lead;
 
     const heroBtns = document.querySelectorAll("#inicio .hero-actions .btn");
-if (heroBtns.length >= 3) {
-    heroBtns[0].textContent = t.hero.btns[0];
-    heroBtns[1].textContent = t.hero.btns[1];
-    heroBtns[2].textContent = t.hero.btns[2];
-}
+    if (heroBtns.length >= 3) {
+        heroBtns[0].textContent = t.hero.btns[0];
+        heroBtns[1].textContent = t.hero.btns[1];
+        heroBtns[2].textContent = t.hero.btns[2];
+    }
 
     const bullets = document.querySelectorAll("#inicio .hero-bullets li");
     if (bullets.length >= 3) {
