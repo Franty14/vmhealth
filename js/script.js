@@ -82,7 +82,7 @@ const i18n = {
         hero: {
             h1: "Cuidamos tu bienestar, impulsamos tu independencia",
             lead: "Promovemos la salud, la autonomía y la funcionalidad a través de la fisioterapia y la terapia ocupacional, con una atención personalizada y basada en evidencia.",
-            btns: ["Terapia Física", "Terapia Ocupacional"],
+            btns: ["Terapia Física", "Terapia Ocupacional", "Terapia de Lenguaje"],
             bullets: ["Planes 100% personalizados", "Basados en evidencia", "Enfoque humano e inclusivo"],
             heroImgAlt: "Terapia física en acción"
         },
@@ -298,7 +298,7 @@ const i18n = {
         hero: {
             h1: "We care for your well-being, we empower your independence",
             lead: "We promote health, autonomy, and functionality through physical and occupational therapy with personalized, evidence-based care.",
-            btns: ["Physical Therapy", "Occupational Therapy"],
+            btns: ["Physical Therapy", "Occupational Therapy", "Speech Therapy"],
             bullets: ["100% personalized plans", "Evidence-based", "Human & inclusive approach"],
             heroImgAlt: "Physical therapy in action"
         },
@@ -527,11 +527,12 @@ function applyLang(lang) {
     const heroLead = document.querySelector("#inicio .lead");
     if (heroLead) heroLead.textContent = t.hero.lead;
 
-    const heroBtns = document.querySelectorAll("#inicio .hero-actions a");
-    if (heroBtns.length >= 2) {
-        heroBtns[0].textContent = t.hero.btns[0];
-        heroBtns[1].textContent = t.hero.btns[1];
-    }
+    const heroBtns = document.querySelectorAll("#inicio .hero-actions .btn");
+if (heroBtns.length >= 3) {
+    heroBtns[0].textContent = t.hero.btns[0];
+    heroBtns[1].textContent = t.hero.btns[1];
+    heroBtns[2].textContent = t.hero.btns[2];
+}
 
     const bullets = document.querySelectorAll("#inicio .hero-bullets li");
     if (bullets.length >= 3) {

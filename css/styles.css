@@ -969,6 +969,11 @@ textarea:focus {
     text-decoration: none;
 }
 
+.btn-visual {
+    cursor: default;
+    pointer-events: none;
+}
+
 .footer-logo {
     width: 72px;
     max-width: 72px;
